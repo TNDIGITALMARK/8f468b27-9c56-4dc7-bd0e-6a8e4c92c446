@@ -69,6 +69,16 @@
   --green-bar-off-white: #F5F5F5;
   --green-bar-white: #FFFFFF;
 
+  /* SMOOTHIE MENU COLORS - Extracted from menu design */
+  --smoothie-green: #7cb342;
+  --smoothie-green-light: #8bc34a;
+  --smoothie-green-border: #689f38;
+  --smoothie-accent: #ffd54f;
+  --smoothie-text-dark: #333333;
+  --smoothie-text-muted: #666666;
+  --smoothie-card-bg: #ffffff;
+  --smoothie-price-bg: #f9f9f9;
+
   /* Typography custom properties */
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Montserrat', sans-serif;
@@ -371,4 +381,60 @@ input:focus, select:focus, textarea:focus {
 
 .border-border {
   border-color: hsl(var(--border));
+}
+
+/* SMOOTHIE MENU UTILITY CLASSES */
+.smoothie-card {
+  background: var(--smoothie-card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.smoothie-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.menu-section-header {
+  background: linear-gradient(135deg, var(--smoothie-green) 0%, var(--smoothie-green-light) 100%);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-section-header.pro {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+}
+
+.price-badge {
+  background: var(--smoothie-price-bg);
+  border: 1px solid var(--smoothie-green-border);
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 600;
+  color: var(--smoothie-text-dark);
+  display: inline-block;
+  font-size: 0.875rem;
+}
+
+.size-selector {
+  background: white;
+  border: 2px solid var(--smoothie-green);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: var(--smoothie-green);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-selector:hover,
+.size-selector.active {
+  background: var(--smoothie-green);
+  color: white;
 }
