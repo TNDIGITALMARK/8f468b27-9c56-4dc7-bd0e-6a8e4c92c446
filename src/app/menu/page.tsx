@@ -1,5 +1,3 @@
-'use client';
-
 import { menuData, menuNotes, baseOptions, headerInfo } from '@/data/menu';
 import { Leaf, Crown } from 'lucide-react';
 import Image from 'next/image';
